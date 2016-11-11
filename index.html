@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+    <title>LMV NAV</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+    <link rel="stylesheet" type="text/css" href="./stylesheets/main.css">
+
+    <!-- Viewer staging -->
+    <!-- link type="text/css" rel="stylesheet" href="https://developer-stg.api.autodesk.com/viewingservice/v1/viewers/style.css"/>
+    <script src="https://developer-stg.api.autodesk.com/viewingservice/v1/viewers/viewer3D.min.js"></script -->
+
+    <!-- Viewer production -->
+    <link type="text/css" rel="stylesheet" href="https://developer.api.autodesk.com/viewingservice/v1/viewers/style.css?v=v1.2.16"/>
+    <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/viewer3D.min.js?v=v1.2.16"></script>
+
+    <script src="/scripts/model.js"></script>
+    <script src="/scripts/marker.js"></script>
+    <script src="/scripts/panel.js"></script>
+    <script src="/rac.json"></script>
+    <!--script src="/viewer3D.js?v=v1.2.16"></script-->
+    <!--script src="/scripts/debug.js"></script-->
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="nav-item"><img class src="./images/favicon.ico"></div>
+        <div class="page-title">LMV 2D-3D Navigation</div>    
+    </div>
+    <div class="control-panel">
+        <div class="table-wrapper">
+            <div class="table-header">Models</div>
+            <div class="table-list"></div>
+        </div>
+    </div>
+    <div id="panelBtn" class="collapse-btn left-round-btn icon icon-angle-circled-left"></div>
+    <div id="saveBtn" class="collapse-btn left-round-btn icon icon-plus"></div>
+    <div class="viewer-panel">
+        <div id="viewer3D" class="viewer-box"></div>
+        <div class="draggable">
+            <div class="draggable-nav"></div>
+            <div class="draggable-body"><div id="viewer2D"></div></div>
+        </div>
+    </div>
+</body>
+</html>
